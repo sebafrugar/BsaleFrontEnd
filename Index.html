@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">    
+    <title>Bsale</title>
+    
+</head>
+<body class="contairner-fluid row ">
+    <nav class="navbar bg-light border-bottom border-secondary">
+        <div class="container-fluid justify-content-around">
+          <a class="navbar-brand nav-link" href="./index.html">Bsale test</a>
+          <div class="d-flex">
+            <input class="form-control me-sm-2" type="text" placeholder="Tienda" id="buscar">
+            <button class="btn btn-secondary my-2 my-sm-0"  onclick="buscadorProductos()">Buscar</button>
+        </div>
+        </div>
+      </nav>
+      <aside class="col-3 border-end border-secondary pe-0" >  
+        <select class="form-select col-3" id="selectCategory" onclick="buscarPorCategorias()">
+            <option selected>Categorias de Productos</option>
+            <option value="4">bebida</option>
+            <option value="1">bebida energetica</option>
+            <option value="6">Cerveza</option>
+            <option value="2">Pisco</option>
+            <option value="3">Ron</option>
+            <option value="5">Snack</option>
+            <option value="7">Vodka</option>
+            </select>
+      </aside>
+      <div class="col-9 border border-secondary p-3  d-inline justify-content-start">
+        <div class="d-flex justify-content-evenly" >
+            <button id="porNombre" onclick="porNombre()" class="btn btn-secondary"> ordenar por nombre</button>
+            <button id="porPrecioMenorMayor" onclick="porPrecioMenorMayor()" class="btn btn-secondary"> ordenar por precio de Menor a Mayor</button>
+            <button id="porPrecioMayorMenor" onclick="porPrecioMayorMenor()" class="btn btn-secondary"> ordenar por precio de Mayor a Menor</button>          
+            <button id="porStock" onclick="porStock()" class="btn btn-secondary"> ordenar por stock</button>
+        </div>
+        <div class="p-4 " id="busqueda" > 
+             
+        </div>
+        <div class="text-center" >
+            <h3>Todos los Articulos de la Sección</h3>
+        </div>
+        <div class="p-4" id="producto" >  
+        </div>
+      </div>
+      
+      <script src="/Index.js"></script>
+</body>
+</html>
